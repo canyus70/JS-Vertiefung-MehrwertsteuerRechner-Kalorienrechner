@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Projekt Mehrwertstuer-Rechner</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    <section>
+        <div>
+            <h3>Was soll berechnet werden?</h3>
+            <input type="radio" name="berechnungsArt" id="aufschlagenId" value="nettoToBrutto" checked>
+            <label for="aufschlagenId">Mehrwertstuer aufschlagen (Netto zu Brutto)</label>
+            <input type="radio" name="berechnungsArt" id="abziehenId" value="bruttoToNetto">
+            <label for="abziehenId">Mehrwertstuer abziehen (Brutto zu Netto)</label>
+        </div>
+        <div>
+            <h3>Mehrwertstuersatz</h3>
+            <input type="radio" name="mehrwertsteuersatz" id="normalerStuersatzId" value="19" checked>
+            <label for="normalerStuersatzId">19%</label>
+            <input type="radio" name="mehrwertsteuersatz" id="niedrigerStuersatzId" value="7">
+            <label for="niedrigerStuersatzId">7%</label>
+        </div>
+        <div>
+            <p id="neuerPtag">Nettobetrag (Preis ohne Mehrwertstuer) in Euro</p>
+            <input type="number" name="" id="inputId">
+        </div>
+            <button onclick="berechne()">Berechne</button>
+            <h3>Ergebnis</h3>
+            <div><h3>Mehrwertstuerbetrag</h3>
+                <div id="resultMehrwertsteuerId">€</div>
+                <h3 id="neuerText">Bruttobetrag (Endpreis)</h3>
+                <div id="resultBruttobetragId">€</div>
+            </div>
+    </section>
+    
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
